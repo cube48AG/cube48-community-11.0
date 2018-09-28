@@ -19,7 +19,7 @@
 
     """,
 
-    'author': "cube48",
+    'author': "cube48 AG",
     'website': "https://www.cube48.de",
     'category': 'Tools',
     'version': '11.0',

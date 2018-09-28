@@ -1,33 +1,34 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Part of cube48.de. See LICENSE file for full copyright and licensing details.
+#
+#    Part of cube48.de.
+#    
 #
 ##############################################################################
 {
-    'name': "Toggle Debug Mode",
+    'name': "Stop Auto Subscribe Partners",
 
     'summary': """
-        Toggle to debug mode in the top right user menu, just one click!""",
+        New partners will not become auto followers any longer.""",
 
     'description': """
-        Toggle to debug mode in the top right user menu, just one click!
-
+        New partners will not become auto followers any longer.
     """,
 
     'author': "cube48 AG",
     'website': "https://www.cube48.de",
     'category': 'Tools',
-    'version': '11.0',
+    'version': '11.0.',
     'depends': [
         'base',
+        'mail',
+        'base_setup'
     ],
     'data': [
         'views/views.xml',
     ],
-    'qweb': ['static/src/xml/base.xml'],
     'images': ["static/description/banner.png"],
     'license': "AGPL-3",
     'installable': True,
-    'application': True,
 }
