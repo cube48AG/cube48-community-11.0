@@ -29,20 +29,6 @@ odoo.define('quick_language_selection.custom_js', function (require) {
                 lang_list += '<li class="divider"></li>';
                 $('switch-lang').replaceWith(lang_list);
             })
-
-            self._rpc({
-                model: 'ir.config_parameter',
-                method: 'search_read',
-                domain: [['key', '=like', 'app_%']],
-                fields: ['key', 'value'],
-                lazy: false,
-            }).then(function (res) {
-                $.each(res, function (key, val) {
-                    if (val.key == 'app_show_lang' && val.value == "False") {
-                        $('switch-lang').hide();
-                    }
-                });
-            })
         },
         start: function () {
             var self = this;
